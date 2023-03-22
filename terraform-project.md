@@ -56,3 +56,12 @@ You can also check this on the Terraform registry to see what resources are supp
 
 ![verify-docs-vpc](https://user-images.githubusercontent.com/108555140/226975673-3025db90-7ec2-4587-a606-36212845c5b0.png)
 
+### Third Step
+
+1. Now that we've checked that all our resources are compatible with AWS provider we can initialize our environment and take a closer look at what exactly we are provisioning before we apply anything.
+
+2. Let's first take a look at the **main.tf** file
+
+![Screenshot 2023-03-22 113302](https://user-images.githubusercontent.com/108555140/226976371-cd98e40d-e168-4e9d-ac98-2709974302da.png)
+
+Starting from the top 
