@@ -64,4 +64,21 @@ You can also check this on the Terraform registry to see what resources are supp
 
 ![Screenshot 2023-03-22 113302](https://user-images.githubusercontent.com/108555140/226976371-cd98e40d-e168-4e9d-ac98-2709974302da.png)
 
-Starting from the top 
+- Starting from the top we can we are creating our **awscc_ec2_ipam" or our IPAM** we do this by specifying the different regions we are going to be using and giving it a tag with the name **global-ipam** . Also take note that we are also using a module **module.tags_shared.tags** modules are containers for multiple resources that are used together which consist of a bundle of **.tf** or **.tf.json files** .
+
+- Then we create the **"awscc_ec2_ipam_pool" "root"** which is our IPAM root pool that we will reference to create the *useast1 pool* and the *useast2 pool*. We give it an address family which is *ipv4* and create the scope id *awscc_ec2_ipam.main.private_default_scope_id*  followed by the cidr block range and a tag.
+
+![Screenshot 2023-03-22 115816](https://user-images.githubusercontent.com/108555140/226980958-b9449117-765e-4c9c-9bbf-ae75cd9c0ef2.png)
+
+
+- Now with our root pool set in place we create the *useast1* pool. 
+
+![Screenshot 2023-03-22 120030](https://user-images.githubusercontent.com/108555140/226981427-dc34c800-d169-4c65-aa86-b22aee3eb7d0.png)
+
+- In here we us the same commands as before but make note that for our *scope_id* we are refencing the same scope that we used for our root pool. We also added the *locale* to specify the region and our source pool id is going to be the root pool id *awscc_ec2_ipam_pool.root.ipam_pool_id* . We will do the same commands for the us-east-2 pool with the only difference being the *locale* will be *"us-east-2"* .
+
+- Next we look at vpc.
+
+![Screenshot 2023-03-22 121101](https://user-images.githubusercontent.com/108555140/226984141-c0875b6f-33e3-4858-a777-c2c0d42a9d31.png)
+
+- In here we are creating our vpc by making a resource block defining the type of resource *"aws_vpc"* and giving it a name *"useast1"*. We give it 
