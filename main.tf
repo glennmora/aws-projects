@@ -80,12 +80,3 @@ resource "aws_vpc" "useast1" {
     module.tags_shared.tags_aws
   )
 }
-
-# tags
-module "tags_shared" {
-  source  = "aws-ia/label/aws"
-  tags = {
-    terraform = true
-    CostCenter = "123456"
-  }
-}
