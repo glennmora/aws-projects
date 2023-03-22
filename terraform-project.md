@@ -13,5 +13,6 @@
 
 This is how our environment will look after we're done.
 
-### Image
+### Map
 
+![Screenshot 2023-03-22 081953](https://user-images.githubusercontent.com/108555140/226919840-99549603-778f-4faf-a477-63fcf43e6821.png)
