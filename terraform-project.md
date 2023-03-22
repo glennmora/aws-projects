@@ -81,4 +81,20 @@ You can also check this on the Terraform registry to see what resources are supp
 
 ![Screenshot 2023-03-22 121101](https://user-images.githubusercontent.com/108555140/226984141-c0875b6f-33e3-4858-a777-c2c0d42a9d31.png)
 
-- In here we are creating our vpc by making a resource block defining the type of resource *"aws_vpc"* and giving it a name *"useast1"*. We give it 
+- In here we are creating our vpc by making a resource block defining the type of resource *"aws_vpc"* and giving it a name *"useast1"*. We give it the ipam pool id we made for *useast1* the netmask length and a tag.
+ 
+
+## Fourth Step
+
+- Now that we know what we are creating we run the following commands:
+
+* terraform init   # To initialize the environment this will download everything we need to provision this file including the module
+
+![Screenshot 2023-03-22 131846](https://user-images.githubusercontent.com/108555140/227000512-4e87e83b-7751-418e-bd7f-4a8882c7d5e8.png)
+
+
+* terraform apply -auto-approve   # This will apply all of changes to the environment that were described in the main.tf file
+
+
+
+This
