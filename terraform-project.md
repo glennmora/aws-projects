@@ -95,6 +95,13 @@ You can also check this on the Terraform registry to see what resources are supp
 
 * terraform apply -auto-approve   # This will apply all of changes to the environment that were described in the main.tf file
 
+![Screenshot 2023-03-22 135313](https://user-images.githubusercontent.com/108555140/227008055-2fad3a40-e1c7-4c9c-9277-eb16f09dae5d.png)
+
+- This will create the new resources and you're good to go!
 
 
-This
+## Bonus information
+
+- The **outputs.tf** file just has outputs blocks that we can use after we've run *terraform apply* . For instance we reference the *"ipam_id"* and we give it a value so is easily reference in the **main.tf** file. This helps with efficiency since we don't have to make a resource block every time to reference this *"ipam_id"* we can easily just use the output we created for simplicity.
+
+- The **providers.tf** file we just describe the providers we will use for this project in this case we reference *aws & awscc* as well as the regions we will be using *"us-east-1"* & *"us-east-2"*
