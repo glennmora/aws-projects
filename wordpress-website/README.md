@@ -18,4 +18,20 @@
 
 ### First Step
 
-- 
+1. First we are going to create the Amazon RDS instance. Go to https://console.aws.amazon.com/rds/home this will take you to the RDS dashboard. There on the left panel you will click on: 
+* *"Databases"*
+* *"Create database"* 
+* *"Standard create"* 
+* *"Aurora (MySQL Compatible)"* for Engine type
+* Leave everything else the same but under **"Additional configuration"** you will rename the database to **"ebdb"**
+* Then you will create a **Master username and password of your choice make sure to remember these credentials for later**.
+* Create the database
+
+2. Second we will configure the security group
+* Go back to your RDS database panel
+* Select your database
+* You will then click on ebdb instance-1
+* Click on the **VPC security groups** link under *Connectivity & security*
+* Click on *Inbound rules*
+* *Edit inbound rules*
+* 
