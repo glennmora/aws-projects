@@ -34,4 +34,34 @@
 * Click on the **VPC security groups** link under *Connectivity & security*
 * Click on *Inbound rules*
 * *Edit inbound rules*
-* 
+* *Add Rule*
+* For *Type* chose Aurora
+* For Source use sg- and choose the security group that's attached to your Elastic Beanstalk or use the default one
+
+3. Third we will download Wordpress and configure it using the following commands
+
+- curl https://wordpress.org/wordpress-4.9.5.tar.gz -o wordpress.tar.gz
+- wget https://github.com/aws-samples/eb-php-wordpress/releases/download/v1.1/eb-php-wordpress-v1.zip
+- tar -xvf wordpress.tar.gz
+- mv wordpress wordpress-beanstalk
+- cd wordpress-beanstalk
+- unzip ../eb-php-wordpress-v1.zip
+
+4. Fourth we will create the Elastic Beanstalk
+
+- https://console.aws.amazon.com/elasticbeanstalk/home#/newApplication?applicationName=tutorials&environmentType=LoadBalanced
+
+- You will use leave everything as default and create the app
+
+5. Now we will create and configure the security group
+
+- https://console.aws.amazon.com/elasticbeanstalk
+- Choose **environments, configuration, instances, and edit**.
+- Under EC2 security groups choose the security group associated with the Elastic Beanstalk
+- Click **Apply, Confirm**
+- Next go back to **Configuration**, on the **Software** section click on **Edit**
+- Scroll to the **Environment properties** and configure it accordingly
+
+![Screenshot 2023-03-29 115055](https://user-images.githubusercontent.com/108555140/228611271-ebd1bc26-178a-4e67-b2d6-74629518a56e.png)
+
+- Click **Apply**
