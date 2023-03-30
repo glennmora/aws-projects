@@ -6,7 +6,7 @@
 
 ### Imagery
 
-![Screenshot 2023-03-24 105410](https://user-images.githubusercontent.com/108555140/227589408-db63bccf-fdc2-4169-89e7-7e28da88033d.png)
+![Screenshot 2023-03-30 073325](https://user-images.githubusercontent.com/108555140/228837128-a4f37ebe-fad8-4fed-bca8-ebaacb064c5f.png)
 
 - As stated before we are creating a Wordpress website within AWS using Elastic Beanstalk to manage our underlying infrastructure and Amazon RDS to launch our MySQL database. Our configuration will have **Internet Gateway** so that our website has access to the internet. There will be an **S3 Bucket** pointing to the Internet Gateway. 
 
