@@ -23,10 +23,13 @@
 * *"Databases"*
 * *"Create database"* 
 * *"Standard create"* 
-* *"Aurora (MySQL Compatible)"* for Engine type
+* *"MySQL"* for Engine type
 * Leave everything else the same but under **"Additional configuration"** you will rename the database to **"ebdb"**
 * Then you will create a **Master username and password of your choice make sure to remember these credentials for later**.
 * Create the database
+
+![Screenshot 2023-03-30 070647](https://user-images.githubusercontent.com/108555140/228872695-9133bc65-9edb-46ce-b10a-b9c352e0d0d5.png)
+
 
 2. Second we will configure the security group
 
@@ -39,6 +42,9 @@
 * *Add Rule*
 * For *Type* chose Aurora
 * For Source use sg- and choose the security group that's attached to your Elastic Beanstalk or use the default one
+
+![Screenshot 2023-03-30 074847](https://user-images.githubusercontent.com/108555140/228873138-ecfa2a19-a3c4-4776-8a6e-7716c39af45d.png)
+
 
 3. Third we will download Wordpress and configure it using the following commands
 
@@ -55,6 +61,8 @@
 
 - You will use leave everything as default and create the app
 
+![Screenshot 2023-03-30 070703](https://user-images.githubusercontent.com/108555140/228873463-860468d4-47e6-486b-bd08-4951cc1ea831.png)
+
 5. Now we will create and configure the security group
 
 - https://console.aws.amazon.com/elasticbeanstalk
@@ -68,6 +76,7 @@
 
 - Click **Apply**
 
+
 ### Second Step
 
 1. First we're going to configure our application and deployment
@@ -80,6 +89,8 @@
 - click on **environments, Upload and deploy, upload your source bundle, click on Deploy**
 - Then choose the site URL to access your website in a new tab
 - Here you will go through the WordPress installation wizard
+
+![Screenshot 2023-03-30 093747](https://user-images.githubusercontent.com/108555140/228874197-67c7f0e7-90b5-42c7-932d-7ccde794c39a.png)
 
 2. Next we will update the keys and salts
 
