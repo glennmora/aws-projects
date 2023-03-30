@@ -16,8 +16,6 @@
 
 - Now that we know what we are creating lets get started!
 
-### Warning! You will get charge approximately $450 at the end of the month if YOU DON'T CLEAN UP YOUR PROJECT!
-
 ### First Step
 
 1. First we are going to create the Amazon RDS instance. Go to https://console.aws.amazon.com/rds/home this will take you to the RDS dashboard. There on the left panel you will click on: 
@@ -118,7 +116,7 @@
 - Then install and deploy the updated WordPress website to Elastic Beanstalk by following our previous steps that we used to install the previous version. 
 - In the new version of WordPress install the **Importer tool** and use to import our XML file
 
-2. Now we will clean up our project. **Remember that if you don't clean up your project you could get charged up to $450 at the end of the month!**
+2. Now we will clean up our project.
 
 - https://console.aws.amazon.com/elasticbeanstalk
 - Go to **Environments** select your the Elastic Beanstalk we created
